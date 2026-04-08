@@ -91,6 +91,7 @@ nav {
 
 .hero-section-wrapper {
     background-color: var(--bg-hero);
+    background: linear-gradient(to bottom, #0d0d0d 80%, var(--bg-skills) 100%);
 }
 
 .hero-content {
