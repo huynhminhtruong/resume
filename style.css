@@ -93,10 +93,6 @@ nav {
     background-color: var(--bg-hero);
 }
 
-.skills-section-wrapper {
-    background: linear-gradient(to bottom, #0d0d0d 80%, var(--bg-skills) 100%);
-}
-
 .hero-content {
     flex: 1;
 }
@@ -271,10 +267,14 @@ h1 span {
     .stats { justify-content: center; gap: 2rem; }
 }
 
-/* Áp dụng cho phần Technical Skills */
+/* Section Technical Skills */
+.skills-section-wrapper {
+    background: linear-gradient(to bottom, #0d0d0d 80%, var(--bg-skills) 100%);
+}
+
 .skills-section {
-    background-color: var(--bg-skills);
-    padding: 100px 0; /* Tăng khoảng cách để thấy rõ sự chuyển màu */
+    /* background-color: var(--bg-skills); */
+    padding: 100px 0;
     text-align: center;
 }
 
