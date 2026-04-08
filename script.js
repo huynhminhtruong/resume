@@ -12,7 +12,9 @@ function typeWriter() {
     let randomSpeed = speed + Math.random() * 50;
     setTimeout(typeWriter, randomSpeed);
   } else {
-    console.log("Typing sequence complete.");
+    if (cursor) {
+      cursor.style.display = "none"; 
+    }
   }
 }
 
