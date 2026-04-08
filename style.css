@@ -3,195 +3,121 @@
     --card-bg: #161b22;
     --text-main: #c9d1d9;
     --accent-color: #58a6ff;
-    --sec-color: #238636; /* Security Green */
+    --sec-color: #238636;
     --border-color: #30363d;
 }
 
+* {
+    box-sizing: border-box; /* Đảm bảo padding không làm tăng chiều rộng */
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-main);
     line-height: 1.6;
-    margin: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Cho phép scroll nếu nội dung dài */
     min-height: 100vh;
+    padding: 2rem 1rem; /* Padding cho màn hình nhỏ */
 }
 
 .container {
-    width: 90%;
-    max-width: 800px;
+    width: 100%;
+    max-width: 900px; /* Giới hạn độ rộng tối đa để đọc dễ hơn */
     background: var(--card-bg);
-    padding: 40px;
+    padding: clamp(1.5rem, 5vw, 3rem); /* Padding co giãn theo màn hình */
     border-radius: 12px;
     border: 1px solid var(--border-color);
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
+/* --- Responsive Typography --- */
 header {
     text-align: center;
-    border-bottom: 2px solid var(--border-color);
-    padding-bottom: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
 }
 
-h1 {
+#typewriter {
     color: var(--accent-color);
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 2.5rem;
-    margin: 0;
+    font-family: 'Courier New', monospace;
+    /* Tự động co giãn: Min 1.2rem, Max 2.5rem */
+    font-size: clamp(1.2rem, 4vw, 2.5rem); 
+    font-weight: bold;
+    border-right: 3px solid var(--sec-color);
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: cursor-blink 0.8s infinite;
 }
 
 .tagline {
-    font-size: 1.1rem;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
     color: var(--sec-color);
-    font-weight: bold;
-    margin-top: 5px;
+    margin: 0.5rem 0;
 }
 
+/* --- Content Sections --- */
 .section-title {
     color: var(--accent-color);
     border-left: 4px solid var(--sec-color);
-    padding-left: 15px;
-    margin: 25px 0 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    padding-left: 1rem;
+    margin: 2rem 0 1rem;
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li::before {
-    content: ">> ";
-    color: var(--sec-color);
-    font-weight: bold;
-}
-
-li {
-    margin-bottom: 10px;
-}
-
-.btn-group {
-    margin-top: 40px;
+/* --- Technical Arsenal (Dùng Flexbox để tự xuống dòng) --- */
+.tags-container {
     display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.btn {
-    text-decoration: none;
-    padding: 12px 25px;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-
-.btn-primary {
-    background-color: var(--sec-color);
-    color: white;
-}
-
-.btn-primary:hover {
-    background-color: #2ea043;
-    transform: translateY(-2px);
-}
-
-.btn-secondary {
-    border: 1px solid var(--border-color);
-    color: var(--text-main);
-}
-
-.btn-secondary:hover {
-    background-color: var(--border-color);
-}
-
-footer {
-    margin-top: 50px;
-    text-align: center;
-    font-size: 0.8rem;
-    color: #8b949e;
+    flex-wrap: wrap; /* Tự động xuống dòng khi thiếu chỗ */
+    gap: 10px;
 }
 
 .tech-tag {
     background: #1f2428;
     color: #79c0ff;
-    padding: 6px 14px;
+    padding: 0.5rem 1rem;
     border-radius: 20px;
-    border: 1px solid #30363d;
-    margin: 0 8px 10px 0;
-    display: inline-flex;
+    border: 1px solid var(--border-color);
+    display: flex;
     align-items: center;
     gap: 8px;
     font-size: 0.9rem;
-    transition: 0.3s;
 }
 
-.tech-tag i {
-    font-size: 1.1rem;
+/* --- Buttons (Tự động chuyển sang cột trên mobile) --- */
+.btn-group {
+    margin-top: 3rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap; /* Quan trọng để không bị tràn màn hình ngang */
 }
 
-.tech-tag:hover {
-    border-color: var(--sec-color);
-    background: #23863622;
-}
-
-.status-bar {
-    margin-top: 30px;
-    padding: 10px;
-    background: #000;
+.btn {
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
     border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+    min-width: 160px; /* Đảm bảo các nút đều nhau */
+    flex: 1 1 auto; /* Nút tự giãn rộng trên mobile */
+    max-width: 250px;
+}
+
+/* --- Status Bar --- */
+.status-bar {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #000;
     border: 1px solid var(--border-color);
-    font-family: 'Courier New', monospace;
     font-size: 0.85rem;
     display: flex;
     align-items: center;
     gap: 10px;
-}
-
-.dot {
-    height: 8px;
-    width: 8px;
-    background-color: #238636;
-    border-radius: 50%;
-    display: inline-block;
-    box-shadow: 0 0 8px #238636;
-    animation: blink 1.5s infinite;
-}
-
-@keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0.3; }
-    100% { opacity: 1; }
-}
-
-.status-text {
-    color: #8b949e;
-}
-
-.status-focus {
-    color: var(--sec-color);
-    font-weight: bold;
-}
-
-.typing-container {
-    display: inline-block;
-}
-
-#typewriter {
-    color: var(--accent-color);
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 2.5rem;
-    margin: 0;
-    border-right: 3px solid var(--sec-color); /* Con trỏ nhấp nháy */
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline-block;
-    animation: cursor-blink 0.8s infinite;
 }
 
 @keyframes cursor-blink {
