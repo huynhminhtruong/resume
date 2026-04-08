@@ -25,11 +25,16 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
+    overscroll-behavior-y: none;
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(to bottom, #0d0d0d 80%, var(--bg-skills) 100%);
+    background-color: linear-gradient(to bottom, #0d0d0d 80%, var(--bg-skills) 100%);
     color: var(--text-main);
     line-height: 1.6;
+}
+
+html {
+    background-color: linear-gradient(to bottom, #0d0d0d 80%, var(--bg-skills) 100%);
 }
 
 .logo {
