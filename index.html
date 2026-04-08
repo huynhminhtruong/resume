@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <title>s1mpl3 | DevSecOps & SRE Portfolio</title>
     <style>
         :root {
@@ -117,13 +118,6 @@
             background-color: var(--border-color);
         }
 
-        code {
-            background: #000;
-            padding: 2px 6px;
-            border-radius: 4px;
-            color: #ff7b72;
-        }
-
         footer {
             margin-top: 50px;
             text-align: center;
@@ -131,30 +125,65 @@
             color: #8b949e;
         }
 
-        code {
+        .tech-tag {
             background: #1f2428;
-            color: #79c0ff; 
-            padding: 5px 12px;
-            border-radius: 20px; 
+            color: #79c0ff;
+            padding: 6px 14px;
+            border-radius: 20px;
             border: 1px solid #30363d;
-            margin-right: 5px;
-            display: inline-block;
-            margin-bottom: 8px;
+            margin: 0 8px 10px 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             font-size: 0.9rem;
-        }
-        
-        .project-card {
-            background: #0d1117;
-            border: 1px solid var(--border-color);
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 15px;
             transition: 0.3s;
         }
         
-        .project-card:hover {
+        .tech-tag i {
+            font-size: 1.1rem;
+        }
+        
+        .tech-tag:hover {
             border-color: var(--sec-color);
-            transform: translateX(5px);
+            background: #23863622;
+        }
+
+        .status-bar {
+            margin-top: 30px;
+            padding: 10px;
+            background: #000;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .dot {
+            height: 8px;
+            width: 8px;
+            background-color: #238636;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 8px #238636;
+            animation: blink 1.5s infinite;
+        }
+        
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+        
+        .status-text {
+            color: #8b949e;
+        }
+        
+        .status-focus {
+            color: var(--sec-color);
+            font-weight: bold;
         }
     </style>
 </head>
@@ -189,16 +218,28 @@
 
     <section>
         <h2 class="section-title">Technical Arsenal</h2>
-        <p>
-            <code>Linux (Ubuntu/Kali)</code> <code>Docker</code> <code>Python</code> 
-            <code>Golang</code> <code>Bash Scripting</code> <code>Git</code> <code>Networking</code>
-        </p>
+        <div class="tags-container">
+            <span class="tech-tag"><i class="devicon-linux-plain"></i> Linux</span>
+            <span class="tech-tag"><i class="devicon-docker-plain"></i> Docker</span>
+            <span class="tech-tag"><i class="devicon-python-plain"></i> Python</span>
+            <span class="tech-tag"><i class="devicon-go-original-wordmark"></i> Golang</span>
+            <span class="tech-tag"><i class="devicon-bash-plain"></i> Bash</span>
+            <span class="tech-tag"><i class="devicon-git-plain"></i> Git</span>
+            <span class="tech-tag"><i class="devicon-ssh-original"></i> Networking</span>
+        </div>
     </section>
 
     <div class="btn-group">
         <a href="profile.pdf" class="btn btn-primary" target="_blank">📄 My Full CV (PDF)</a>
         <a href="https://linkedin.com/in/huynhminhtruong" class="btn btn-secondary">🔗 LinkedIn</a>
         <a href="mailto:huynhminhtruong2003@gmail.com" class="btn btn-secondary">✉️ Contact Me</a>
+    </div>
+
+    <div class="status-bar">
+        <span class="dot"></span>
+        <span class="status-text">
+            [LIVE] Currently exploring: <span class="status-focus">Linux</span>
+        </span>
     </div>
 
     <footer>
