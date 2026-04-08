@@ -446,7 +446,7 @@ h1 span {
 
 .cursor {
   font-weight: bold;
-  color: #00ff00;
+  color: var(--text-dim);
   animation: blink 0.7s infinite;
 }
 
