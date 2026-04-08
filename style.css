@@ -32,6 +32,27 @@ body {
     line-height: 1.6;
 }
 
+.logo {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.logo:hover {
+  color: #00ff00;
+}
+
+.logo::after {
+  content: "_";
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
