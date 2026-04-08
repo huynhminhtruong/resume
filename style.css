@@ -1,198 +1,251 @@
+/* --- Global Styles --- */
 :root {
     --bg-color: #0d1117;
     --card-bg: #161b22;
     --text-main: #c9d1d9;
-    --accent-color: #58a6ff;
-    --sec-color: #238636; /* Security Green */
+    --text-bright: #f0f6fc;
+    --accent-color: #2ea44f; /* Green for badges/buttons */
+    --hover-accent: #3fb950;
+    --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     --border-color: #30363d;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-main);
+    font-family: var(--font-stack);
     line-height: 1.6;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
 }
 
 .container {
-    width: 90%;
-    max-width: 800px;
-    background: var(--card-bg);
-    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1, h2, h3 { color: var(--text-bright); }
+
+/* Icons (using a placeholder technique for simplicity) */
+[class^="icon-"]::before { content: "•"; padding-right: 6px; }
+
+/* Badges */
+.badge {
+    padding: 4px 12px;
     border-radius: 12px;
+    font-size: 0.8rem;
+    color: #fff;
+}
+.badge.available {
+    background-color: var(--card-bg);
     border: 1px solid var(--border-color);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
-
-header {
-    text-align: center;
-    border-bottom: 2px solid var(--border-color);
-    padding-bottom: 20px;
-    margin-bottom: 2rem;
+.badge.hire {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
 }
-
-h1 {
+.badge.hire::before {
+    content: "●";
     color: var(--accent-color);
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 2.5rem;
-    margin: 0;
+    margin-right: 4px;
 }
 
-#typewriter {
-    color: var(--accent-color);
-    font-family: 'Courier New', monospace;
-    font-size: clamp(1.2rem, 4vw, 2.5rem); 
-    font-weight: bold;
-    border-right: 3px solid var(--sec-color);
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline-block;
-    animation: cursor-blink 0.8s infinite;
-}
-
-.tagline {
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
-    color: var(--sec-color);
-    margin: 0.5rem 0;
-}
-
-/* --- Content Sections --- */
-.section-title {
-    color: var(--accent-color);
-    border-left: 4px solid var(--sec-color);
-    padding-left: 1rem;
-    margin: 2rem 0 1rem;
-    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li::before {
-    content: ">> ";
-    color: var(--sec-color);
-    font-weight: bold;
-}
-
-li {
-    margin-bottom: 10px;
-}
-
-/* --- Buttons (Tự động chuyển sang cột trên mobile) --- */
-.btn-group {
-    margin-top: 3rem;
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap; /* Quan trọng để không bị tràn màn hình ngang */
-}
-
+/* Buttons */
 .btn {
-    text-decoration: none;
-    padding: 0.8rem 1.5rem;
+    display: inline-block;
+    padding: 10px 20px;
     border-radius: 6px;
-    font-weight: bold;
-    text-align: center;
-    min-width: 160px; /* Đảm bảo các nút đều nhau */
-    flex: 1 1 auto; /* Nút tự giãn rộng trên mobile */
-    max-width: 250px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
 }
-
 .btn-primary {
-    background-color: var(--sec-color);
-    color: white;
+    background-color: var(--accent-color);
+    color: #fff;
 }
-
 .btn-primary:hover {
-    background-color: #2ea043;
-    transform: translateY(-2px);
+    background-color: var(--hover-accent);
 }
-
 .btn-secondary {
+    background-color: transparent;
     border: 1px solid var(--border-color);
     color: var(--text-main);
 }
-
 .btn-secondary:hover {
-    background-color: var(--border-color);
+    border-color: #555;
 }
 
-/* --- Technical Arsenal (Dùng Flexbox để tự xuống dòng) --- */
-.tags-container {
+/* Common Skill Tags (Used in Skills & Exp) */
+.skill-tags {
     display: flex;
-    flex-wrap: wrap; /* Tự động xuống dòng khi thiếu chỗ */
-    gap: 10px;
-}
-
-.tech-tag {
-    background: #1f2428;
-    color: #79c0ff;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    border: 1px solid var(--border-color);
-    display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     gap: 8px;
-    font-size: 0.9rem;
+    margin-top: 10px;
 }
-
-.tech-tag i {
-    font-size: 1.1rem;
-}
-
-.tech-tag:hover {
-    border-color: var(--sec-color);
-    background: #23863622;
-}
-
-.status-bar {
-    margin-top: 30px;
-    padding: 10px;
-    background: #000;
-    border-radius: 6px;
+.skill-tags span {
+    padding: 6px 14px;
+    background-color: var(--card-bg);
     border: 1px solid var(--border-color);
-    font-family: 'Courier New', monospace;
-    font-size: 0.85rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.dot {
-    height: 8px;
-    width: 8px;
-    background-color: #238636;
-    border-radius: 50%;
-    display: inline-block;
-    box-shadow: 0 0 8px #238636;
-    animation: blink 1.5s infinite;
-}
-
-@keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0.3; }
-    100% { opacity: 1; }
-}
-
-.status-text {
-    color: #8b949e;
-}
-
-.status-focus {
-    color: var(--sec-color);
-    font-weight: bold;
-}
-
-footer {
-    margin-top: 50px;
-    text-align: center;
+    border-radius: 8px;
     font-size: 0.8rem;
-    color: #8b949e;
+    font-weight: 500;
+}
+
+/* --- Section Titles & Subtitles --- */
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+.section-subtitle {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    opacity: 0.7;
+}
+
+
+/* --- SECTION 1: HERO (Image 1) --- */
+.hero-section {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    position: relative;
+}
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem;
+}
+.hero-title { font-size: 3rem; }
+.hero-desc { font-size: 1.2rem; font-weight: 500; }
+.hero-spec { opacity: 0.8; }
+.hero-actions { display: flex; gap: 1rem; margin-top: 1.5rem; }
+.social-icons { display: flex; gap: 1rem; margin-top: 2rem; font-size: 1.2rem; }
+
+.profile-circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #aaa; /* Placeholder for profile image */
+    background-size: cover;
+    margin: 0 auto;
+    border: 10px solid var(--border-color);
+}
+.hire-badge-container {
+    text-align: center;
+    margin-top: -30px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-stats-bar {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(22, 27, 34, 0.9);
+    border-top: 1px solid var(--border-color);
+}
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+    max-width: 800px;
+}
+.stat-item {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.stat-item span {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--text-main);
+    opacity: 0.7;
+}
+.scroll-explore {
+    text-align: center;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    opacity: 0.6;
+}
+
+
+/* --- SECTION 2: TECHNICAL SKILLS (Image 2) --- */
+.skills-section {
+    background-color: var(--card-bg);
+    padding: 100px 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+}
+.skill-card {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.skill-header {
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+}
+.skill-card h3 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+
+/* --- SECTION 3: PROFESSIONAL EXPERIENCE (Image 3) --- */
+.experience-section {
+    padding: 100px 0;
+}
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.exp-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+.exp-card h3 {
+    margin: 0 0 0.3rem;
+    font-size: 1.3rem;
+}
+.exp-company {
+    color: var(--accent-color);
+    margin: 0;
+}
+.exp-meta {
+    text-align: right;
+    opacity: 0.7;
+    display: flex;
+    flex-direction: column;
+}
+.exp-desc {
+    margin: 0 0 1rem;
+    color: var(--text-main);
+}
+.exp-tags span {
+    background-color: rgba(46, 164, 79, 0.1);
+    color: var(--hover-accent);
+    border-color: rgba(46, 164, 79, 0.3);
 }
