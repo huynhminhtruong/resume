@@ -89,6 +89,14 @@ nav {
     gap: 4rem;
 }
 
+.hero-section-wrapper {
+    background-color: var(--bg-hero);
+}
+
+.skills-section-wrapper {
+    background: linear-gradient(to bottom, #0d0d0d 80%, var(--bg-skills) 100%);
+}
+
 .hero-content {
     flex: 1;
 }
@@ -183,13 +191,6 @@ h1 span {
     display: flex;
     justify-content: center;
     position: relative;
-}
-
-/* Áp dụng cho phần Hero đã làm ở bước trước */
-.hero-section-wrapper {
-    background-color: var(--bg-hero);
-    /* Thêm một chút gradient để chuyển màu mượt mà xuống dưới */
-    background: linear-gradient(to bottom, #0d0d0d 80%, var(--bg-skills) 100%);
 }
 
 .img-wrapper {
