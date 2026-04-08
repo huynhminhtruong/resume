@@ -118,14 +118,41 @@
         
         /* --- Status Bar --- */
         .status-bar {
-            margin-top: 2rem;
-            padding: 1rem;
+            margin-top: 30px;
+            padding: 10px;
             background: #000;
+            border-radius: 6px;
             border: 1px solid var(--border-color);
+            font-family: 'Courier New', monospace;
             font-size: 0.85rem;
             display: flex;
             align-items: center;
             gap: 10px;
+        }
+        
+        .dot {
+            height: 8px;
+            width: 8px;
+            background-color: #238636;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 8px #238636;
+            animation: blink 1.5s infinite;
+        }
+        
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+        
+        .status-text {
+            color: #8b949e;
+        }
+        
+        .status-focus {
+            color: var(--sec-color);
+            font-weight: bold;
         }
         
         @keyframes cursor-blink {
