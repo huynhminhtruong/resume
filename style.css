@@ -33,7 +33,7 @@ header {
     text-align: center;
     border-bottom: 2px solid var(--border-color);
     padding-bottom: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
 }
 
 h1 {
@@ -43,20 +43,31 @@ h1 {
     margin: 0;
 }
 
-.tagline {
-    font-size: 1.1rem;
-    color: var(--sec-color);
+#typewriter {
+    color: var(--accent-color);
+    font-family: 'Courier New', monospace;
+    font-size: clamp(1.2rem, 4vw, 2.5rem); 
     font-weight: bold;
-    margin-top: 5px;
+    border-right: 3px solid var(--sec-color);
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: cursor-blink 0.8s infinite;
 }
 
+.tagline {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: var(--sec-color);
+    margin: 0.5rem 0;
+}
+
+/* --- Content Sections --- */
 .section-title {
     color: var(--accent-color);
     border-left: 4px solid var(--sec-color);
-    padding-left: 15px;
-    margin: 25px 0 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    padding-left: 1rem;
+    margin: 2rem 0 1rem;
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
 }
 
 ul {
@@ -74,21 +85,24 @@ li {
     margin-bottom: 10px;
 }
 
+/* --- Buttons (Tự động chuyển sang cột trên mobile) --- */
 .btn-group {
-    margin-top: 40px;
+    margin-top: 3rem;
     display: flex;
-    gap: 15px;
+    gap: 1rem;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Quan trọng để không bị tràn màn hình ngang */
 }
 
 .btn {
     text-decoration: none;
-    padding: 12px 25px;
+    padding: 0.8rem 1.5rem;
     border-radius: 6px;
     font-weight: bold;
-    transition: all 0.3s ease;
-    display: inline-block;
+    text-align: center;
+    min-width: 160px; /* Đảm bảo các nút đều nhau */
+    flex: 1 1 auto; /* Nút tự giãn rộng trên mobile */
+    max-width: 250px;
 }
 
 .btn-primary {
@@ -110,25 +124,23 @@ li {
     background-color: var(--border-color);
 }
 
-footer {
-    margin-top: 50px;
-    text-align: center;
-    font-size: 0.8rem;
-    color: #8b949e;
+/* --- Technical Arsenal (Dùng Flexbox để tự xuống dòng) --- */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap; /* Tự động xuống dòng khi thiếu chỗ */
+    gap: 10px;
 }
 
 .tech-tag {
     background: #1f2428;
     color: #79c0ff;
-    padding: 6px 14px;
+    padding: 0.5rem 1rem;
     border-radius: 20px;
-    border: 1px solid #30363d;
-    margin: 0 8px 10px 0;
-    display: inline-flex;
+    border: 1px solid var(--border-color);
+    display: flex;
     align-items: center;
     gap: 8px;
     font-size: 0.9rem;
-    transition: 0.3s;
 }
 
 .tech-tag i {
@@ -176,4 +188,11 @@ footer {
 .status-focus {
     color: var(--sec-color);
     font-weight: bold;
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #8b949e;
 }
