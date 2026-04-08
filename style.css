@@ -1,10 +1,22 @@
 :root {
-    --bg-color: #0a0a0a;
+    /* Màu nền phân tầng */
+    --bg-hero: #0d0d0d;      /* Xám cực tối cho phần đầu */
+    --bg-skills: #050505;    /* Đen sâu hơn cho phần Skills */
+    --bg-card: #0a0a0a;      /* Nền của các ô kỹ thuật */
+    
+    /* Màu chữ và hiệu ứng */
+    --text-main: #ffffff;
+    --text-dim: #a1a1a1;
+    --border-color: #1f1f1f; /* Viền tinh tế hơn */
+    --tag-bg: #161616;       /* Màu nền của các viên thuốc (tags) */
+    --accent: #ffffff;
+    
+    /* --bg-color: #0a0a0a;
     --text-main: #ffffff;
     --text-dim: #a1a1a1;
     --accent: #ffffff;
     --card-bg: #161616;
-    --border-color: #333333;
+    --border-color: #333333; */
 }
 
 * {
@@ -173,6 +185,13 @@ h1 span {
     position: relative;
 }
 
+/* Áp dụng cho phần Hero đã làm ở bước trước */
+.hero-section-wrapper {
+    background-color: var(--bg-hero);
+    /* Thêm một chút gradient để chuyển màu mượt mà xuống dưới */
+    background: linear-gradient(to bottom, #0d0d0d 80%, var(--bg-skills) 100%);
+}
+
 .img-wrapper {
     position: relative;
     width: 400px;
@@ -251,9 +270,10 @@ h1 span {
     .stats { justify-content: center; gap: 2rem; }
 }
 
-/* Skills Section Styling */
+/* Áp dụng cho phần Technical Skills */
 .skills-section {
-    padding: 80px 0;
+    background-color: var(--bg-skills);
+    padding: 100px 0; /* Tăng khoảng cách để thấy rõ sự chuyển màu */
     text-align: center;
 }
 
@@ -277,16 +297,16 @@ h1 span {
 }
 
 .skill-card {
-    background-color: transparent;
+    background-color: var(--bg-card);
     border: 1px solid var(--border-color);
-    border-radius: 16px;
-    padding: 1.5rem;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
 }
 
 .skill-card:hover {
-    border-color: #555;
-    transform: translateY(-5px);
+    border-color: #333;
+    background-color: #0f0f0f;
 }
 
 .card-title {
@@ -313,13 +333,13 @@ h1 span {
 }
 
 .tag {
-    background-color: #1a1a1a; /* Màu nền xám đậm cho tag */
-    color: #e0e0e0;
-    padding: 0.4rem 0.8rem;
-    border-radius: 8px;
+    background-color: var(--tag-bg);
+    color: #d1d1d1;
+    padding: 0.4rem 0.9rem;
+    border-radius: 6px;
     font-size: 0.75rem;
-    font-weight: 500;
-    border: 1px solid #2a2a2a;
+    border: 1px solid #262626;
+    font-weight: 400;
 }
 
 /* Tablet & Mobile Responsive */
