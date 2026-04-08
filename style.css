@@ -479,6 +479,28 @@ h1 span {
   animation: blink 0.7s infinite;
 }
 
+.exp-details {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.detail-item i {
+    color: var(--text-dim);
+    margin-top: 4px;
+    width: 16px;
+    text-align: center;
+}
+
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
