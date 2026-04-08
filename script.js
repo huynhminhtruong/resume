@@ -1,6 +1,7 @@
 const text = "Hello, I'm Huynh Minh Truong";
 const speed = 100;
 const target = document.getElementById("typewriter");
+const cursor = document.querySelector(".cursor");
 
 let i = 0;
 
