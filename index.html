@@ -3,156 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Portfolio - Huynh Minh Truong</title>
+    <title>Senior Software Engineer Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <nav class="container">
+            <div class="logo">Dev<span>Portfolio</span></div>
+            <ul class="nav-links">
+                <li><a href="#about">Giới thiệu</a></li>
+                <li><a href="#experience">Kinh nghiệm</a></li>
+                <li><a href="#projects">Dự án</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section class="hero-section">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <div class="header-badges">
-                    <span class="badge available"><i class="icon-zap"></i> Available for work</span>
-                </div>
-                
-                <h1 class="hero-title">Hello, I'm <br> Huynh Minh Truong</h1>
-                <p class="hero-desc">Senior Software Engineer crafting digital experiences with <strong>5+ years</strong> of expertise.</p>
-                <p class="hero-spec">Specializing in full-stack development, DevOps practices, and scalable solutions that drive business growth.</p>
-                
-                <div class="hero-actions">
-                    <a href="#" class="btn btn-primary"><i class="icon-download"></i> Download Resume</a>
-                    <a href="#" class="btn btn-secondary">View My Work</a>
-                </div>
-                
-                <div class="social-icons">
-                    <a href="#"><i class="icon-github"></i></a>
-                    <a href="#"><i class="icon-linkedin"></i></a>
-                    <a href="#"><i class="icon-mail"></i></a>
-                </div>
+    <section id="hero" class="container">
+        <div class="hero-content">
+            <h1>Chào bạn, tôi là <span class="highlight">Kỹ sư Phần mềm Cao cấp</span></h1>
+            <p>Tôi chuyên xây dựng các hệ thống phân tán, tối ưu hóa hiệu suất backend và thiết kế kiến trúc hệ thống quy mô lớn.</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn primary">Xem dự án</a>
+                <a href="#" class="btn secondary">Tải CV</a>
             </div>
-
-            <div class="hero-profile-area">
-                <div class="profile-circle">
-                    </div>
-                <div class="hire-badge-container">
-                    <span class="badge hire">● Available for hire</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="hero-stats-bar">
-            <div class="container stats-container">
-                <div class="stat-item">50+ <span>Projects</span></div>
-                <div class="stat-item">5+ <span>Years Exp</span></div>
-                <div class="stat-item">100% <span>Client Satisfaction</span></div>
-            </div>
-            <div class="scroll-explore"><i class="icon-arrow-down"></i> Scroll to explore</div>
         </div>
     </section>
 
-    <section class="skills-section">
+    <section id="experience" class="container">
+        <h2 class="section-title">Kinh nghiệm làm việc</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="time">2021 - Hiện tại</div>
+                <div class="content">
+                    <h3>Senior Software Engineer - Tech Corp</h3>
+                    <p>Dẫn dắt đội ngũ phát triển microservices, cải thiện 40% hiệu suất xử lý dữ liệu hệ thống.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="time">2018 - 2021</div>
+                <div class="content">
+                    <h3>Backend Developer - Startup Hub</h3>
+                    <p>Phát triển API cho nền tảng thương mại điện tử phục vụ hơn 1 triệu người dùng hàng tháng.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <h2 class="section-title">Dự án tiêu biểu</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-img"></div>
+                <div class="project-info">
+                    <h3>Hệ thống Phân tích Dữ liệu</h3>
+                    <p>Xây dựng hệ thống xử lý thời gian thực bằng Go và Kafka.</p>
+                    <div class="tags">
+                        <span>Go</span>
+                        <span>Kafka</span>
+                        <span>Docker</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-img"></div>
+                <div class="project-info">
+                    <h3>Nền tảng Cloud Native</h3>
+                    <p>Triển khai hạ tầng trên AWS sử dụng Kubernetes và Terraform.</p>
+                    <div class="tags">
+                        <span>AWS</span>
+                        <span>K8s</span>
+                        <span>Terraform</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <p class="section-subtitle">Comprehensive expertise across modern development stack with focus on scalable web applications and DevOps practices.</p>
-
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-header"><h3><i class="icon-code"></i> Programming Languages</h3></div>
-                    <div class="skill-tags">
-                        <span>JavaScript</span><span>TypeScript</span><span>SQL</span><span>PHP</span><span>HCL</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-header"><h3><i class="icon-settings"></i> DevOps & Tools</h3></div>
-                    <div class="skill-tags">
-                        <span>Docker</span><span>Git</span><span>VIM</span><span>NeoVim</span><span>Kubernetes</span><span>Agile</span><span>CI/CD with Jenkins</span><span>Terraform</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-header"><h3><i class="icon-globe"></i> JavaScript Libraries & Frameworks</h3></div>
-                    <div class="skill-tags">
-                        <span>Node.js</span><span>React.js</span><span>Bun.js</span><span>Deno</span><span>Vanilla JS</span><span>Next.js</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-header"><h3><i class="icon-database"></i> Web Frameworks</h3></div>
-                    <div class="skill-tags">
-                        <span>Express.js</span><span>Fastify</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-header"><h3><i class="icon-cloud"></i> Backend as a Service</h3></div>
-                    <div class="skill-tags">
-                        <span>Firebase</span><span>Appwrite</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-header"><h3><i class="icon-check-square"></i> Testing</h3></div>
-                    <div class="skill-tags">
-                        <span>Jest</span>
-                    </div>
-                </div>
+            <p>&copy; 2024 Developer Portfolio. Thiết kế dành cho các Kỹ sư chuyên nghiệp.</p>
+            <div class="socials">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
-    </section>
-
-    <section class="experience-section">
-        <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
-            <p class="section-subtitle">Over 5 years of experience building scalable web applications and leading development teams in fast-paced environments.</p>
-
-            <div class="experience-list">
-                <div class="exp-card">
-                    <div class="exp-header">
-                        <div>
-                            <h3><i class="icon-briefcase"></i> Senior Software Engineer</h3>
-                            <p class="exp-company">Tech Solutions Inc.</p>
-                        </div>
-                        <div class="exp-meta">
-                            <span class="exp-date">📅 2022 - Present</span>
-                            <span class="exp-loc">📍 Remote</span>
-                        </div>
-                    </div>
-                    <p class="exp-desc">Lead full-stack development projects using React, Node.js, and TypeScript. Implemented CI/CD pipelines with Jenkins and managed containerized applications with Docker and Kubernetes.</p>
-                    <div class="skill-tags exp-tags">
-                        <span>React</span><span>Node.js</span><span>TypeScript</span><span>Docker</span><span>Kubernetes</span><span>Jenkins</span>
-                    </div>
-                </div>
-                <div class="exp-card">
-                    <div class="exp-header">
-                        <div>
-                            <h3><i class="icon-briefcase"></i> Full Stack Developer</h3>
-                            <p class="exp-company">Digital Innovations Ltd.</p>
-                        </div>
-                        <div class="exp-meta">
-                            <span class="exp-date">📅 2020 - 2022</span>
-                            <span class="exp-loc">📍 New York, NY</span>
-                        </div>
-                    </div>
-                    <p class="exp-desc">Developed and maintained web applications using modern JavaScript frameworks. Collaborated with DevOps team to implement automated deployment processes and infrastructure as code with Terraform.</p>
-                    <div class="skill-tags exp-tags">
-                        <span>JavaScript</span><span>Express.js</span><span>Firebase</span><span>Terraform</span><span>Git</span>
-                    </div>
-                </div>
-                <div class="exp-card">
-                    <div class="exp-header">
-                        <div>
-                            <h3><i class="icon-briefcase"></i> Software Developer</h3>
-                            <p class="exp-company">StartupCorp</p>
-                        </div>
-                        <div class="exp-meta">
-                            <span class="exp-date">📅 2019 - 2020</span>
-                            <span class="exp-loc">📍 San Francisco, CA</span>
-                        </div>
-                    </div>
-                    <p class="exp-desc">Built responsive web applications and RESTful APIs. Worked with cross-functional teams using Agile methodologies to deliver high-quality software solutions.</p>
-                    <div class="skill-tags exp-tags">
-                        <span>PHP</span><span>JavaScript</span><span>SQL</span><span>Jest</span><span>Agile</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    </footer>
 </body>
 </html>
