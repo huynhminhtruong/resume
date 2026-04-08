@@ -9,138 +9,134 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <div class="logo">John Developer</div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Experience</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><button class="theme-toggle"><i class="fa-regular fa-moon"></i></button></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="hero-section-wrapper">
+        <header>
+            <nav class="container">
+                <div class="logo">John Developer</div>
+            </nav>
+        </header>
 
-    <main class="container">
-        <section class="hero">
-            <div class="hero-content">
-                <div class="status-badge">
-                    <span class="sparkle">✨</span> Available for Work
+        <main class="container">
+            <section class="hero">
+                <div class="hero-content">
+                    <div class="status-badge">
+                        <span class="sparkle">✨</span> Available for Work
+                    </div>
+                    <h1>Hello, I'm <br><span>Huynh Minh Truong(Marc)</span></h1>
+                    <p class="role-desc">Senior Software Engineer crafting digital experiences with <strong>5+ years</strong> of expertise</p>
+                    <p class="bio">Specializing in full-stack development, DevOps practices, and scalable solutions that drive business growth.</p>
+                    
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary"><i class="fa-solid fa-download"></i> Download Resume</a>
+                        <a href="#" class="btn btn-secondary">View My Work</a>
+                    </div>
+    
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-regular fa-envelope"></i></a>
+                    </div>
                 </div>
-                <h1>Hello, I'm <br><span>Huynh Minh Truong(Marc)</span></h1>
-                <p class="role-desc">Senior Software Engineer crafting digital experiences with <strong>5+ years</strong> of expertise</p>
-                <p class="bio">Specializing in full-stack development, DevOps practices, and scalable solutions that drive business growth.</p>
-                
-                <div class="cta-buttons">
-                    <a href="#" class="btn btn-primary"><i class="fa-solid fa-download"></i> Download Resume</a>
-                    <a href="#" class="btn btn-secondary">View My Work</a>
+    
+                <div class="hero-image">
+                    <div class="img-wrapper">
+                        <img src="avatar-003-copy.PNG" alt="Huynh Minh Truong(Marc)">
+                        <div class="hire-status">
+                            <span class="dot"></span> Available for hire
+                        </div>
+                    </div>
                 </div>
+            </section>
+        </main>
+    </div>
 
-                <div class="social-links">
-                    <a href="#"><i class="fa-brands fa-github"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#"><i class="fa-regular fa-envelope"></i></a>
-                </div>
+    <div class="skills-section-wrapper">
+        <section class="skills-section container">
+            <div class="skills-header">
+                <h2>Technical Skills</h2>
+                <p>Comprehensive expertise across modern development stack with focus on scalable web applications and DevOps practices.</p>
             </div>
-
-            <div class="hero-image">
-                <div class="img-wrapper">
-                    <img src="avatar-003-copy.PNG" alt="Huynh Minh Truong(Marc)">
-                    <div class="hire-status">
-                        <span class="dot"></span> Available for hire
+        
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="card-title">
+                        <i class="fa-solid fa-code"></i>
+                        <h3>Programming Languages</h3>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">PHP</span>
+                        <span class="tag">HCL</span>
+                    </div>
+                </div>
+        
+                <div class="skill-card">
+                    <div class="card-title">
+                        <i class="fa-solid fa-gear"></i>
+                        <h3>DevOps & Tools</h3>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Docker</span>
+                        <span class="tag">Git</span>
+                        <span class="tag">VIM</span>
+                        <span class="tag">NeoVim</span>
+                        <span class="tag">Kubernetes</span>
+                        <span class="tag">Agile</span>
+                        <span class="tag">CI/CD with Jenkins</span>
+                        <span class="tag">Terraform</span>
+                    </div>
+                </div>
+        
+                <div class="skill-card">
+                    <div class="card-title">
+                        <i class="fa-solid fa-globe"></i>
+                        <h3>JavaScript Libraries & Frameworks</h3>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Node.js</span>
+                        <span class="tag">React.js</span>
+                        <span class="tag">Bun.js</span>
+                        <span class="tag">Deno</span>
+                        <span class="tag">Vanilla JS</span>
+                        <span class="tag">Next.js</span>
+                    </div>
+                </div>
+        
+                <div class="skill-card">
+                    <div class="card-title">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <h3>Web Frameworks</h3>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Express.js</span>
+                        <span class="tag">Fastify</span>
+                    </div>
+                </div>
+        
+                <div class="skill-card">
+                    <div class="card-title">
+                        <i class="fa-solid fa-cloud"></i>
+                        <h3>Backend as a Service</h3>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Firebase</span>
+                        <span class="tag">Appwrite</span>
+                    </div>
+                </div>
+        
+                <div class="skill-card">
+                    <div class="card-title">
+                        <i class="fa-solid fa-flask"></i>
+                        <h3>Testing</h3>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Jest</span>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section class="skills-section container">
-    <div class="skills-header">
-        <h2>Technical Skills</h2>
-        <p>Comprehensive expertise across modern development stack with focus on scalable web applications and DevOps practices.</p>
     </div>
-
-    <div class="skills-grid">
-        <div class="skill-card">
-            <div class="card-title">
-                <i class="fa-solid fa-code"></i>
-                <h3>Programming Languages</h3>
-            </div>
-            <div class="tags">
-                <span class="tag">JavaScript</span>
-                <span class="tag">TypeScript</span>
-                <span class="tag">SQL</span>
-                <span class="tag">PHP</span>
-                <span class="tag">HCL</span>
-            </div>
-        </div>
-
-        <div class="skill-card">
-            <div class="card-title">
-                <i class="fa-solid fa-gear"></i>
-                <h3>DevOps & Tools</h3>
-            </div>
-            <div class="tags">
-                <span class="tag">Docker</span>
-                <span class="tag">Git</span>
-                <span class="tag">VIM</span>
-                <span class="tag">NeoVim</span>
-                <span class="tag">Kubernetes</span>
-                <span class="tag">Agile</span>
-                <span class="tag">CI/CD with Jenkins</span>
-                <span class="tag">Terraform</span>
-            </div>
-        </div>
-
-        <div class="skill-card">
-            <div class="card-title">
-                <i class="fa-solid fa-globe"></i>
-                <h3>JavaScript Libraries & Frameworks</h3>
-            </div>
-            <div class="tags">
-                <span class="tag">Node.js</span>
-                <span class="tag">React.js</span>
-                <span class="tag">Bun.js</span>
-                <span class="tag">Deno</span>
-                <span class="tag">Vanilla JS</span>
-                <span class="tag">Next.js</span>
-            </div>
-        </div>
-
-        <div class="skill-card">
-            <div class="card-title">
-                <i class="fa-solid fa-layer-group"></i>
-                <h3>Web Frameworks</h3>
-            </div>
-            <div class="tags">
-                <span class="tag">Express.js</span>
-                <span class="tag">Fastify</span>
-            </div>
-        </div>
-
-        <div class="skill-card">
-            <div class="card-title">
-                <i class="fa-solid fa-cloud"></i>
-                <h3>Backend as a Service</h3>
-            </div>
-            <div class="tags">
-                <span class="tag">Firebase</span>
-                <span class="tag">Appwrite</span>
-            </div>
-        </div>
-
-        <div class="skill-card">
-            <div class="card-title">
-                <i class="fa-solid fa-flask"></i>
-                <h3>Testing</h3>
-            </div>
-            <div class="tags">
-                <span class="tag">Jest</span>
-            </div>
-        </div>
-    </div>
-</section>
-    </main>
 </body>
 </html>
